@@ -1,4 +1,6 @@
-class FreeStudent extends User {
+import { Student } from "./Student.mjs";
+
+export class FreeStudent extends Student {
     constructor(prop){
         super(prop);
     }

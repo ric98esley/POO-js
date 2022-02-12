@@ -1,4 +1,4 @@
-class Course {
+export class Course {
     constructor ({
         name,
         classes = [],

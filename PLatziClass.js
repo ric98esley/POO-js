@@ -8,7 +8,7 @@ function videoStop(id) {
     console.log("pausamos la url " + urlSecret);
 }
 
-class PlatziClass {
+export class PlatziClass {
     constructor({
         name,
         videoID,

@@ -1,4 +1,4 @@
-class LearningPaths {
+export class LearningPaths {
     constructor({
         namePaths,
         courses = []
