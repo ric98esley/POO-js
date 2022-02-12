@@ -1,71 +1,3 @@
-
-function videoPLay(id) {
-    const urlSecret = "https://ricardo.secreto.com";
-    console.log("se está reproduciendo desde la url " + urlSecret);
-}
-
-function videoStop(id) {
-    const urlSecret = "https://ricardo.secreto.com";
-    console.log("pausamos la url " + urlSecret);
-}
-
-export class PlatziClass {
-    constructor({
-        name,
-        videoID,
-    })
-    {
-        this.name = name;
-        this.videoID = videoID;
-    }
-
-    reproducir(){
-        videoPLay(this.videoID);
-    }
-
-    pausar() {
-        videoStop(this.videoID);
-    }
-}
-
-class Course {
-    constructor ({
-        name,
-        classes = []
-    })
-    {
-        this._name = name;
-        this.classes = classes;
-    }
-
-    get name() {
-        return this._name;
-    }
-
-    set name(newName){
-        if (newName === "Mal curso")
-        {
-            console.error("Web... no")
-        } else{
-            this._name = newName;
-        }
-    }
-}
-class LearningPaths {
-    constructor({
-        namePaths,
-        courses = []
-    })
-    {
-        this.namePaths = namePaths;
-        this.courses = courses;
-    }
-
-    addCourse(newCourse){
-        this.courses.push(newCourse)
-    }
-};
-
 const desarrolloWeb = new LearningPaths({
     namePaths: "Escuela de desarrollo Web",
     courses : [
@@ -85,40 +17,21 @@ const disenoGrafico = new LearningPaths({
 
 const cursoProgBasica = new Course ({
     name: "Curso Gratis de Programación Básica",
+    isFree: true
 })
 const cursoDefinitivoHTLM = new Course(
     {
         name: "Curso definitivo de HTML y"
     }
 )
-
-
-class Student {
-    constructor({
-        name,
-        email,
-        username,
-        twitter = undefined,
-        instagram = undefined,
-        facebook = undefined,
-        approvedCourses = [],
-        learningPaths = [],
-    })
+const cursoPracticoHTML = new Course(
     {
-        this.name = name;
-        this.email = email;
-        this.username = username;
-        this.socialMedia ={
-            twitter,
-            instagram,
-            facebook,
-        };
-        this.approvedCourses = approvedCourses;
-        this.learningPaths = learningPaths;
-}
-}
+        name: "Curso Practico de HTML y CSS",
+        lang: "english"
+    }
+)
 
-const juan2 = new Student({
+const juan = new FreeStudent({
     name: "JuanDC",
     username: "juandc",
     email: "juanito@guuan.com",
@@ -128,7 +41,7 @@ const juan2 = new Student({
     ]
 });
 
-const miguelito2 = new Student({
+const miguelito = new BasicStudent({
     name: "miguelito",
     username: "miguelito",
     email: "miguelito@miguel.com",
