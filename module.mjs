@@ -3,7 +3,7 @@ import { User } from "./User.mjs";
 import { Student } from "./Student.mjs";
 import { BasicStudent } from "./BasicStudent.mjs";
 import { FreeStudent } from "./FreeStudent.mjs";
-import { Course } from "./Course.js";
+import { Course } from "./Course.mjs";
 import { LearningPaths } from "./LearningPaths.mjs";
 
 const clase67 = new PlatziClass({
@@ -19,26 +19,10 @@ clase67.pausar();
 clase67.reproducir();
 clase67.pausar();
 
-const desarrolloWeb = new LearningPaths({
-  namePaths: "Escuela de desarrollo Web",
-  courses : [
-      "Curso de Computacion Basica 2019",
-      "Curso Gratis de Programación Básica",
-      "Curso Básico de Algoritmos y Pensamiento Lógico"
-  ]
-});
-
-const disenoGrafico = new LearningPaths({
-  namePaths : "Escuela de Diseño Gráfico",
-  courses : [
-      "Audiocurso Glosario de Términis de Diseño",
-      "Curso de Técnocas para Desarrollar tu Creatividad"
-  ]
-});
-
 const cursoProgBasica = new Course ({
   name: "Curso Gratis de Programación Básica",
-  isFree: true
+  isFree: true,
+  classes: clase67
 })
 const cursoDefinitivoHTLM = new Course(
   {
@@ -51,6 +35,22 @@ const cursoPracticoHTML = new Course(
       lang: "english"
   }
 )
+const desarrolloWeb = new LearningPaths({
+  namePaths: "Escuela de desarrollo Web",
+  courses : [
+      cursoPracticoHTML,
+      cursoProgBasica,
+      "Curso Básico de Algoritmos y Pensamiento Lógico"
+  ]
+});
+
+const disenoGrafico = new LearningPaths({
+  namePaths : "Escuela de Diseño Gráfico",
+  courses : [
+      "Audiocurso Glosario de Términis de Diseño",
+      "Curso de Técnocas para Desarrollar tu Creatividad"
+  ]
+});
 
 const juan = new FreeStudent({
   name: "JuanDC",
@@ -73,3 +73,4 @@ const miguelito = new BasicStudent({
 })
 
 console.table(miguelito);
+console.table(juan);
