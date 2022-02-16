@@ -1,9 +1,8 @@
 
-const juan = {
+    let juan = {
     name: "juan",
     age: 18,
     approvedCourses: ["Curso1"],
-
     addCourse(newCourse) {
         console.log("this" + this);
         console.log("this.approvedCourses " + this.approvedCourses)
