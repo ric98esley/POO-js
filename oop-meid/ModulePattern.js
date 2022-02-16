@@ -27,12 +27,16 @@ function createStudent({
             instagram,
             facebook
         },
-        changeName(newName) {
-            private["_name"] = newName;
-        },
-        readName(){
+        get name(){
             return private["_name"]
-        }
+        },
+        set name(newName) {
+            if (newName.length >= 5){
+                private["_name"] = newName;
+            } else {
+                console.warn("Tu nombre de tener al emnos 5 carateres")
+            }
+        },
     }
 
     Object.defineProperty(public, "changeName", {
