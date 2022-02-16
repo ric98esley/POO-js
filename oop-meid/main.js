@@ -50,8 +50,13 @@ const obj1 = {
     c: {
         d: "d",
         e: "e"
+    },
+    f: [123],
+    changeA(){
+        this.a = "AAAA"
     }
 }
+const array = [1,2,3,4,5,6,7,7,8,9,0,1]
 
 const obj2 = {}
 for(prop in obj1){
@@ -64,3 +69,7 @@ const obj4 = Object.create(obj1);
 const stringObject = JSON.stringify(obj1);
 
 const obj5 = JSON.parse(stringObject);
+
+const obj6 = deepCopy(obj1);
+
+const copiaArray = deepCopy(array);
