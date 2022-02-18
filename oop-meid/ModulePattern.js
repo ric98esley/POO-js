@@ -51,7 +51,7 @@ function createStudent({
     return public;
 }
 
-const ricardo = createStudent({
+const ricardo1 = createStudent({
     name: "ricardo",
     email: "email.com"
 });

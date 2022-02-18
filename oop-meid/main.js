@@ -1,5 +1,5 @@
 
-    let juan = {
+let juan = {
     name: "juan",
     age: 18,
     approvedCourses: ["Curso1"],
@@ -51,14 +51,14 @@ const obj1 = {
         e: "e"
     },
     f: [123],
-    changeA(){
+    changeA() {
         this.a = "AAAA"
     }
 }
-const array = [1,2,3,4,5,6,7,7,8,9,0,1]
+const array = [1, 2, 3, 4, 5, 6, 7, 7, 8, 9, 0, 1]
 
 const obj2 = {}
-for(prop in obj1){
+for (prop in obj1) {
     obj2[prop] = obj1[prop];
 }
 const obj3 = Object.assign(obj1);
@@ -72,3 +72,14 @@ const obj5 = JSON.parse(stringObject);
 const obj6 = deepCopy(obj1);
 
 const copiaArray = deepCopy(array);
+
+const escuelaWeb = new LearningPath({ name: "Escuela de WebDev" });
+const escuelaData = new LearningPath({ name: "Escuela de Data Science" });
+const ricardo = new Student({
+    email: "juanito@frijoles.co",
+    name: "Juanito",
+    learningPaths: [
+        escuelaWeb,
+        escuelaData,
+    ],
+});
